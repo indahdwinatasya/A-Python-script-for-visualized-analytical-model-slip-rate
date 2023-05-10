@@ -1,0 +1,20 @@
+from cmath import pi
+import numpy as np
+import matplotlib.pyplot as plot
+
+#Formula v(x)=(v/pi)*arctan(x/D), for locking depth 10
+x=np.arange(-200, 500, 0.1)
+v1(x) = (-10/pi)*np.arctan(x/10)
+v2(x) = (-15/pi)*np.arctan(x/10)
+v3(x) = (-20/pi)*np.arctan(x/10)
+v4(x) = (-25/pi)*np.arctan(x/10)
+
+#Plotting analytic Model Slip Rate
+plot.plot(x, v1(x), ‘r’)
+plot.plot(x, v2(x), ‘g’)
+plot.plot(x, v3(x), ‘b’)
+plot.plot(x, v4(x), ‘c’)
+plot.xlabel(‘Distance to the Fault (km)’)
+plot.ylabel(‘Fault-paralel velocity(mm/yr)’)
+ploy.grid(False, which=‘both’)
+plot.show()
