@@ -1,0 +1,15 @@
+from turtle import width
+import numpy as np
+import matplotlib.pyplot as plt
+xlist = np.array([0, 5, 10, 17, 20, 25, 30])
+ylist = np.array([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50])
+X, Y = np.meshgrid(xlist, ylist)
+Z = np.array([error in variation slip rate and locking depth]).reshape(11,7)
+fig,ax=plt.subplots(1,1)
+plt.contour(xlist, ylist, Z, 20, linewidths=0.2, colors='k')
+cs = ax.contourf(xlist, ylist, Z, 50, cmap=plt.cm.turbo)
+fig.colorbar(cs)
+x = [slip rate value]
+y = [locking depth value]
+plt.scatter(x, y, label= 'Stars', color= 'red', s=250, marker='*', edgecolor='dimgray')
+plt.show()
